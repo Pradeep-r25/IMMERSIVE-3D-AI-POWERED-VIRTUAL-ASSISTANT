@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --leva-sizes-rootWidth: 340px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #faaca8;
+  background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+}
+
+body.greenScreen {
+  background-color: #00ff00;
+  background-image: none;
+}
+
+/* Hide Leva control panel if present */
+.leva-c-kWgxhW {
+  display: none !important;
+}
+
+/* Hide all pink buttons except the 'Send' (which has px-10) and 'Zoom' (which has no px-10 but is not mic) */
+button.bg-pink-500:not(.px-10):not(:contains("Zoom")) {
+  display: none;
+}
+
+/* Smooth button transition */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Scrollbar customization (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
